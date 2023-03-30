@@ -16,6 +16,8 @@ import {
 
 const pathSrc = path.resolve(__dirname, 'src')
 
+import postCssPxToRem from "postcss-pxtorem"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -29,6 +31,14 @@ export default defineConfig({
         additionalData: `@use "~/styles/element/index.scss" as *;`,
       },
     },
+    postcss: {
+      plugins: [
+        postCssPxToRem({
+          rootValue: 120, // 1rem的大小
+          propList: ['*'], // 需要转换的属性，这里选择全部都进行转换
+        })
+      ]
+    }
   },
   plugins: [
     vue(),

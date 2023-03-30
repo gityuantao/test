@@ -1,23 +1,16 @@
 <template>
   <el-config-provider namespace="ep">
     <BaseHeader />
-    <div style="display: flex">
+    <div class="body flex">
       <BaseSide />
-      <div>
-        <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-        <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
-      </div>
+      <BodyCard />
     </div>
   </el-config-provider>
 </template>
 
 <style>
-#app {
-  text-align: center;
-  color: var(--ep-text-color-primary);
-}
-
-.element-plus-logo {
-  width: 50%;
+.body {
+  padding: 10px;
+  gap: 10px;
 }
 </style>

@@ -3,26 +3,49 @@ import { toggleDark } from '~/composables';
 </script>
 
 <template>
-  <el-menu class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="1">Element Plus</el-menu-item>
-    <el-sub-menu index="2">
-      <template #title>Workspace</template>
-      <el-menu-item index="2-1">item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
-      <el-sub-menu index="2-4">
-        <template #title>item four</template>
-        <el-menu-item index="2-4-1">item one</el-menu-item>
-        <el-menu-item index="2-4-2">item two</el-menu-item>
-        <el-menu-item index="2-4-3">item three</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="3" disabled>Info</el-menu-item>
-    <el-menu-item index="4">Orders</el-menu-item>
-    <el-menu-item h="full" @click="toggleDark()">
-      <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--ep-menu-item-height);">
-        <i inline-flex i="dark:ep-moon ep-sunny" />
-      </button>
-    </el-menu-item>
-  </el-menu>
+  <div class="header flex justify-between">
+    <div class="left flex items-center">
+      <img class="logo" src="../../assets/logo.png" />
+      <div class="title">标题</div>
+    </div>
+    <div class="right flex items-center">
+      <div class="button cursor-pointer flex items-center">
+        <img class="icon" src="../../assets/u31.png" />修改密码
+      </div>
+      <div class="button cursor-pointer flex items-center">
+        <img class="icon" src="../../assets/u27.png" />退出
+      </div>
+    </div>
+  </div>
 </template>
+<style lang="scss" scoped>
+.header {
+  background: rgba(93, 127, 255, 1);
+  padding: 10px;
+  color: #fff;
+
+  .left {
+    font-size: 18px;
+    gap: 10px;
+
+    .logo {
+      width: 30px;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    font-size: 14px;
+    gap: 10px;
+
+    .button {
+      gap: 10px;
+
+      .icon {
+        width: 15px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+</style>
