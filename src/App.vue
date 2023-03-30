@@ -3,7 +3,7 @@
     <BaseHeader />
     <div class="body flex">
       <BaseSide />
-      <BodyCard />
+      <BodyCard class="flex-1" />
     </div>
   </el-config-provider>
 </template>
