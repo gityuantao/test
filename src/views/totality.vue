@@ -536,7 +536,7 @@ const initChart = () => {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 50px);
     overflow: auto;
     flex: 1;
 

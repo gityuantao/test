@@ -1,8 +1,8 @@
 <template>
   <el-config-provider namespace="ep">
-    <BaseHeader />
+    <!-- <BaseHeader /> -->
     <div class="body flex">
-      <BaseSide />
+      <!-- <BaseSide /> -->
       <BodyCard class="flex-1" />
     </div>
   </el-config-provider>

@@ -214,10 +214,11 @@ const initChart = () => {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 
     .chart {
         width: 337px;
-        height: 145px;
+        height: 100px;
     }
 
     .empty {
