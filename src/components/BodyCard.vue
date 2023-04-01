@@ -108,7 +108,7 @@ const rightList = [
   <el-card>
     <div class="box-card">
       <div class="header">
-        <div class="title">部门态势123</div>
+        <div class="title">{{route.name}}</div>
         <div class="button" @click="back">返回 <img class="img" src="../assets/u36.png" alt=""></div>
       </div>
       <div class="content">

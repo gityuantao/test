@@ -7,12 +7,12 @@ const routes = [
   { path: "/", redirect: "/department" },
   {
     path: "/department",
-    name: "department",
+    name: "部门态势123",
     component: department
   },
   {
     path: "/totality",
-    name: "totality",
+    name: "总体态势123",
     component: totality
   }
 ]

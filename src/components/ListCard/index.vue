@@ -1,6 +1,9 @@
 <template>
     <div class="list-card">
-        <div class="title">{{ title }}</div>
+        <div class="header">
+            <div class="title">{{ title }}</div>
+            <slot name="header-right" />
+        </div>
         <slot>
             <div class="empty">{{ slotEmpty }}</div>
         </slot>
@@ -24,21 +27,27 @@ defineProps<Props>()
     gap: 5px;
     min-width: 80px;
 
-    .title {
-        color: #555555;
-        font-size: 10px;
-        font-weight: 600;
+    .header {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px;
 
-        &::before {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 10px;
-            background: #555555;
-            border-radius: 10px;
+        .title {
+            color: #555555;
+            font-size: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background: #555555;
+                border-radius: 10px;
+            }
         }
     }
 

@@ -27,10 +27,7 @@
                     <div ref="chart2Ref" class="chart"></div>
                 </ListCard>
                 <ListCard title="狱内病犯数变化趋势">
-                    <div class="empty">
-                        <div> culprit2</div>
-                        <div> 一周曲线</div>
-                    </div>
+                    <div ref="chart4Ref" class="chart"></div>
                 </ListCard>
             </el-space>
             <el-space fill direction="vertical">
@@ -38,10 +35,7 @@
                     <div ref="chart3Ref" class="chart"></div>
                 </ListCard>
                 <ListCard title="狱内服药罪犯数变化趋势">
-                    <div class="empty">
-                        <div> culprit5</div>
-                        <div> 一周曲线</div>
-                    </div>
+                    <div ref="chart5Ref" class="chart"></div>
                 </ListCard>
             </el-space>
         </el-space>
@@ -61,10 +55,14 @@ onUnmounted(() => {
 const chart1Ref = ref<HTMLElement>()
 const chart2Ref = ref<HTMLElement>()
 const chart3Ref = ref<HTMLElement>()
+const chart4Ref = ref<HTMLElement>()
+const chart5Ref = ref<HTMLElement>()
 const initChart = () => {
     let chart1 = echarts.init(chart1Ref.value as HTMLElement);
     let chart2 = echarts.init(chart2Ref.value as HTMLElement);
     let chart3 = echarts.init(chart3Ref.value as HTMLElement);
+    let chart4 = echarts.init(chart4Ref.value as HTMLElement);
+    let chart5 = echarts.init(chart5Ref.value as HTMLElement);
     chart1.setOption({
         xAxis: {
             type: 'category',
@@ -157,6 +155,50 @@ const initChart = () => {
                     { value: 1048, name: '未服药罪犯' },
                     { value: 735, name: '服药罪犯' },
                 ]
+            }
+        ]
+    });
+    chart4.setOption({
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            top: 10,
+            bottom: 20
+        },
+        xAxis: {
+            type: 'category',
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                data: [150, 230, 224, 218, 135, 147, 260],
+                type: 'line'
+            }
+        ]
+    });
+    chart5.setOption({
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            top: 10,
+            bottom: 20
+        },
+        xAxis: {
+            type: 'category',
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                data: [150, 230, 224, 218, 135, 147, 260],
+                type: 'line'
             }
         ]
     });
