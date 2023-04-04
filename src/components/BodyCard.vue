@@ -172,7 +172,7 @@ const rightList = [
       border-radius: 30px;
       color: #fff;
       font-size: 8px;
-      padding: 0 10px;
+      padding: 5px 10px;
       transition: all .3s;
       cursor: pointer;
 

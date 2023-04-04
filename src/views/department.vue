@@ -140,6 +140,7 @@ const initChart = () => {
                 type: 'pie',
                 radius: ['40%', '70%'],
                 center: ['60%', '50%'],
+                width:'100%',
                 avoidLabelOverlap: false,
                 itemStyle: {
                     borderRadius: 10,
@@ -219,15 +220,14 @@ const initChart = () => {
     flex: 1;
 
     .chart {
-        width: 337px;
-        height: 100px;
+        width: 100%;
+        height: 115px;
     }
 
     .empty {
         font-size: 24px;
         color: #5d7fff;
         text-align: center;
-        padding: 10px 0;
     }
 }
 </style>

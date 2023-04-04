@@ -55,7 +55,6 @@ defineProps<Props>()
         font-size: 24px;
         color: #5d7fff;
         text-align: center;
-        padding: 10px 0;
     }
 }
 </style>
