@@ -105,6 +105,7 @@ const initChart = () => {
             {
                 type: 'pie',
                 radius: ['40%', '70%'],
+                center: ['60%', '50%'],
                 avoidLabelOverlap: false,
                 itemStyle: {
                     borderRadius: 10,
@@ -138,6 +139,7 @@ const initChart = () => {
             {
                 type: 'pie',
                 radius: ['40%', '70%'],
+                center: ['60%', '50%'],
                 avoidLabelOverlap: false,
                 itemStyle: {
                     borderRadius: 10,

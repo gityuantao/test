@@ -20,6 +20,7 @@ import postCssPxToRem from "postcss-pxtorem"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'/static/html',
   resolve: {
     alias: {
       '~/': `${pathSrc}/`,

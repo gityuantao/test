@@ -12,7 +12,6 @@ declare module '@vue/runtime-core' {
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
     BodyCard: typeof import('./components/BodyCard.vue')['default']
-    Charts: typeof import('./components/charts/index.vue')['default']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElOption: typeof import('element-plus/es')['ElOption']
